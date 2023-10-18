@@ -12,7 +12,6 @@
 - 📫 How to reach me **adityabverma1@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
-<a href="mailtoadityabverma1@gmail.com>adityabverma1@gmail.com<a>
 <p align="left">
 </p>
 

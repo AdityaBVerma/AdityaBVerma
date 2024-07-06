@@ -7,7 +7,7 @@
 <p align="left">
 <a href="https://twitter.com/adityaverm20240" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="adityaverm20240" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/https://www.linkedin.com/in/aditya-verma-6ab107308/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/aditya-verma-6ab107308/" height="30" width="40" /></a>
-<a href="https://hashnode.com/@anonymusdeveloper" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="@anonymusdeveloper" height="30" width="40" /></a>
+<a href="https://hashnode.com/@anonymusdeveloper" target="blank"><img align="center" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1647152709324/BgqHEiR8w.png" alt="@anonymusdeveloper" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>

@@ -2,7 +2,6 @@
 import fs from "fs";
 import Parser from "rss-parser";
 
-const FEED_URL = "https://adityabverma.hashnode.dev/rss.xml";
 const OUTPUT_FILES = ["blog-card1.svg", "blog-card2.svg"]; // latest two posts
 const WIDTH = 600;
 const HEIGHT = 150;
@@ -91,8 +90,11 @@ function firstImageFromHTML(html = "") {
 }
 
 (async function main() {
-  const parser = new Parser({ headers: { "User-Agent": "github-action" } });
-  const feed = await parser.parseURL(FEED_URL);
+  const parser = new Parser();
+
+  // Read from local RSS XML file instead of fetching
+  const xml = fs.readFileSync("rss.xml", "utf8");
+  const feed = await parser.parseString(xml);
 
   // Get the latest two items
   const items = (feed.items || []).slice(0, 2);
@@ -109,7 +111,7 @@ function firstImageFromHTML(html = "") {
     fs.writeFileSync(OUTPUT_FILES[i], svg, "utf8");
   }
 
-  console.log("Blog cards generated:", OUTPUT_FILES.join(", "));
+  console.log("Blog cards generated from local RSS file:", OUTPUT_FILES.join(", "));
 })().catch((err) => {
   console.error("Failed to generate blog cards:", err);
   process.exit(1);

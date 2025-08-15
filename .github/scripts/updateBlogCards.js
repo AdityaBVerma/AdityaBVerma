@@ -44,24 +44,47 @@ function svgCard({ title }) {
     .join("");
   const more = truncated ? "…" : "";
 
-  return `<?xml version="1.0" encoding="UTF-8"?>
+ return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blog card">
   <defs>
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.25"/>
+    <!-- Background blur filter -->
+    <filter id="glassBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Gradient for bottom accent -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.8"/>
+    </linearGradient>
   </defs>
 
-  <!-- Card background -->
-  <rect x="0" y="0" width="${WIDTH}" height="${HEIGHT}" rx="12" ry="12" fill="#0f1115" filter="url(#shadow)"/>
-  <rect x="0" y="${HEIGHT - 4}" width="${WIDTH}" height="4" fill="#16a34a"/>
+  <!-- Transparent glass background -->
+  <rect x="0" y="0" width="${WIDTH}" height="${HEIGHT}" rx="16" ry="16" 
+        fill="rgba(255, 255, 255, 0.08)" 
+        stroke="rgba(255, 255, 255, 0.18)" 
+        stroke-width="1"
+        filter="url(#shadow)"/>
+
+  <!-- Inner overlay for blur (glass effect) -->
+  <rect x="0" y="0" width="${WIDTH}" height="${HEIGHT}" rx="16" ry="16"
+        fill="url(#accentGradient)" fill-opacity="0.05" filter="url(#glassBlur)"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="${HEIGHT - 4}" width="${WIDTH}" height="4" fill="url(#accentGradient)"/>
 
   <!-- Title -->
   <g transform="translate(0, 36)">
-    <text x="16" y="0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#e5e7eb">
+    <text x="16" y="0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.95)">
       ${tspans}${more}
     </text>
-    <text x="16" y="${HEIGHT - 24}" font-family="Inter, Arial, sans-serif" font-size="11" fill="#9ca3af">
+    <text x="16" y="${HEIGHT - 24}" font-family="Inter, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">
       Latest from Hashnode • updates every 6h
     </text>
   </g>

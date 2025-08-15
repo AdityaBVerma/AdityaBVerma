@@ -30,6 +30,7 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add blog-card1.svg blog-card2.svg
+          git add blog-card1.svg blog-card2.svg blog-card3.svg
           git commit -m "chore: update blog cards" || echo "No changes"
           git push
+

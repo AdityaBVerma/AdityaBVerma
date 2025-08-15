@@ -1,4 +1,4 @@
-<table style="width:100%; border:1px solid white; background-color:#0d0d0d; color:white; border-radius:10px; padding:20px;">
+<table style="width:100%; background-color:#0d0d0d; color:white; border-radius:10px; padding:20px;">
 <tr>
   <!-- Left Column -->
   <td style="width:35%; vertical-align:top;">
@@ -31,11 +31,17 @@
       <img src="https://raw.githubusercontent.com/AdityaBVerma/AdityaBVerma/main/blog-card2.svg" alt="Latest Blog 2" />
     </a>
   </div>
+  <div style="border:1px solid white; padding:5px;">
+    <a href="https://adityabverma.hashnode.dev/">
+      <img src="https://raw.githubusercontent.com/AdityaBVerma/AdityaBVerma/main/blog-card3.svg" alt="Latest Blog 3" />
+    </a>
+  </div>
 
-    <table style="width:100%; margin-top:10px;">
+
+  <table style="width:100%; margin-top:10px;">
       <tr>
         <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaBVerma&layout=compact" width="25%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaBVerma&layout=compact" width="35%">
   <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=3145dshnwjrguj4bhbgbm6owzf4q&redirect=true">
     <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=3145dshnwjrguj4bhbgbm6owzf4q&cover_image=true&theme=natemoo-re&show_offline=false&background_color=121212&interchange=true&bar_color=53b14f&bar_color_cover=false" width="55%">
   </a>

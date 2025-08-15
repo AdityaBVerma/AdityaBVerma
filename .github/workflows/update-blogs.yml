@@ -1,0 +1,35 @@
+name: Update Blog Cards
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours (UTC)
+  workflow_dispatch:        # allow manual run
+
+permissions:
+  contents: write           # allow the action to commit SVGs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci || npm i
+
+      - name: Generate blog cards
+        run: node .github/scripts/updateBlogCards.js
+
+      - name: Commit & push if changed
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add blog-card1.svg blog-card2.svg
+          git commit -m "chore: update blog cards" || echo "No changes"
+          git push

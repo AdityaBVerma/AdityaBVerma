@@ -1,7 +1,7 @@
 <table style="width:100%; background-color:#0d0d0d; color:white; border-radius:10px; padding:20px;">
 <tr>
   <!-- Left Column -->
-  <td style="width:35%; vertical-align:top;">
+  <td style="width:40%; vertical-align:top;">
     <h1>Aditya Verma</h1>
     <p>Backend developer | Cloud enthusiast | Tech blogger</p>
 
@@ -15,7 +15,7 @@
   </td>
 
   <!-- Right Column -->
-  <td style="width:65%; vertical-align:top;">
+  <td style="width:60%; vertical-align:top;">
     <h3 align="left"> Technologies</h3>
 
 <p align="left">

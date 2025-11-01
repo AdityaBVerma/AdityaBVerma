@@ -47,9 +47,9 @@
       <tr>
         <td align="center">
           <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AdityaBVerma&layout=compact&theme=dark" width="35%">
-          <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=3145dshnwjrguj4bhbgbm6owzf4q&redirect=true&type=recent">
+          <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=3145dshnwjrguj4bhbgbm6owzf4q&redirect=true">
   <img
-    src="https://spotify-github-profile.kittinanx.com/api/view?uid=3145dshnwjrguj4bhbgbm6owzf4q&type=recent&cover_image=true&theme=natemoo-re&show_offline=false&background_color=121212&bar_color=53b14f&bar_color_cover=false"
+    src="https://spotify-github-profile.kittinanx.com/api/view?uid=3145dshnwjrguj4bhbgbm6owzf4q&cover_image=true&theme=natemoo-re&show_offline=true&background_color=121212&bar_color=53b14f&bar_color_cover=false"
     width="60%"
   />
 </a>
